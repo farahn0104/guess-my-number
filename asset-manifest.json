@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/guess-my-number/static/css/main.ef7d3942.css",
+    "main.js": "/guess-my-number/static/js/main.161ae110.js",
+    "static/js/453.6887d92b.chunk.js": "/guess-my-number/static/js/453.6887d92b.chunk.js",
+    "index.html": "/guess-my-number/index.html",
+    "main.ef7d3942.css.map": "/guess-my-number/static/css/main.ef7d3942.css.map",
+    "main.161ae110.js.map": "/guess-my-number/static/js/main.161ae110.js.map",
+    "453.6887d92b.chunk.js.map": "/guess-my-number/static/js/453.6887d92b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ef7d3942.css",
+    "static/js/main.161ae110.js"
+  ]
+}
