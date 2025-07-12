@@ -1,0 +1,253 @@
+/*
+  Stylish, responsive CSS for Number Guessing Game
+  Hindi comments diye gaye hain
+*/
+.rngg-outer {
+  min-height: 100vh;
+  min-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  transition: background 0.3s;
+  overflow: hidden;
+}
+.rngg-outer.dark {
+  --bg: #181c24;
+  --box: #23283a;
+  --text: #fff;
+  --input: #23283a;
+  --input-text: #fff;
+  --btn: #3a3f5a;
+  --btn-hover: #4e5370;
+  --msg: #ffe066;
+}
+.rngg-outer.light {
+  --bg: #f3f6fa;
+  --box: #fff;
+  --text: #222;
+  --input: #f3f6fa;
+  --input-text: #222;
+  --btn: #e0e7ef;
+  --btn-hover: #c9d6e6;
+  --msg: #2d8cf0;
+}
+.rngg-center-wrap {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rngg-header-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  gap: 8px;
+}
+.rngg-logo {
+  font-size: 1.18rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  color: #2d8cf0;
+}
+.rngg-author-below {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 1.01rem;
+  font-weight: 500;
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.rngg-box {
+  background: var(--box);
+  color: var(--text);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.13);
+  padding: 32px 22px 24px 22px;
+  min-width: 320px;
+  max-width: 95vw;
+  width: 370px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rngg-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+.rngg-range-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+/* Remove number input arrows for all browsers */
+.rngg-range-input {
+  width: 60px;
+  padding: 7px 6px;
+  border-radius: 7px;
+  border: 1px solid #bfc6d1;
+  background: var(--input);
+  color: var(--input-text);
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.rngg-range-input::-webkit-outer-spin-button,
+.rngg-range-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.rngg-range-input[type=number] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+.rngg-range-input:focus {
+  border: 1.5px solid #2d8cf0;
+}
+.rngg-range-sep {
+  font-size: 1.1rem;
+  color: #888;
+}
+.rngg-new-btn {
+  background: var(--btn);
+  color: var(--text);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-left: 6px;
+  transition: background 0.2s;
+}
+.rngg-new-btn:hover {
+  background: var(--btn-hover);
+}
+.rngg-guess-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+/* Remove number input arrows for all browsers */
+.rngg-guess-input {
+  width: 140px;
+  padding: 8px 10px;
+  border-radius: 7px;
+  border: 1px solid #bfc6d1;
+  background: var(--input);
+  color: var(--input-text);
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.rngg-guess-input::-webkit-outer-spin-button,
+.rngg-guess-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.rngg-guess-input[type=number] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+.rngg-guess-input:focus {
+  border: 1.5px solid #2d8cf0;
+}
+.rngg-guess-btn {
+  background: var(--btn);
+  color: var(--text);
+  border: none;
+  border-radius: 7px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.rngg-guess-btn:hover {
+  background: var(--btn-hover);
+}
+.rngg-message {
+  min-height: 28px;
+  margin-bottom: 10px;
+  color: var(--msg);
+  font-weight: 600;
+  font-size: 1.08rem;
+  text-align: center;
+}
+.rngg-instructions {
+  margin-top: 10px;
+  font-size: 0.98rem;
+  color: #888;
+  padding-left: 18px;
+  line-height: 1.6;
+}
+.rngg-toggle-row {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+.rngg-mode-btn {
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 4px 6px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+.rngg-mode-btn:hover {
+  background: var(--btn-hover);
+}
+@media (max-width: 600px) {
+  .rngg-center-wrap {
+    width: 100vw;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .rngg-box {
+    min-width: 98vw;
+    width: 99vw;
+    max-width: 99vw;
+    padding: 16px 2vw 16px 2vw;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .rngg-title {
+    font-size: 1.1rem;
+  }
+  .rngg-range-input, .rngg-guess-input {
+    width: 80px;
+    font-size: 0.98rem;
+  }
+  .rngg-header-row {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+  .rngg-author-below {
+    font-size: 0.98rem;
+    margin-top: 12px;
+    width: 100%;
+  }
+}
